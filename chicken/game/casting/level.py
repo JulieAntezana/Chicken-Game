@@ -8,7 +8,7 @@ class Level(Actor):
     """
     A record of game play levels. 
     
-    The responsibility of Level is to keep track of the game level. It also displays itself at in the top banner
+    The responsibility of Score is to keep track of the game level. It also displays itself at in the top banner
 
     Attributes:
         _level (int): The points earned in the game.

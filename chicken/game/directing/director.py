@@ -1,7 +1,3 @@
-from constants import *
-from game.casting.cast import Cast
-from game.scripting.script import Script
-
 class Director:
     """A person who directs the game. 
     
@@ -32,16 +28,6 @@ class Director:
             self._execute_actions("update", cast, script)
             self._execute_actions("output", cast, script)
         self._video_service.close_window()
-        
-        self.on_next(NEW_GAME)
-        self._execute_actions(INITIALIZE)
-        self._execute_actions(LOAD)
-        while self._video_service.is_window_open():
-            self._execute_actions(INPUT)
-            self._execute_actions(UPDATE)
-            self._execute_actions(OUTPUT)
-        self._execute_actions(UNLOAD)
-        self._execute_actions(RELEASE)
 
     def _execute_actions(self, group, cast, script):
         """Calls execute for each action in the given group.

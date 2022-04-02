@@ -2,14 +2,11 @@ from constants import *
 from game.casting.actor import Actor
 from game.scripting.action import Action
 from game.shared.point import Point
-from game.scripting.play_sound_action import PlaySoundAction
-from game.services.raylib.raylib_audio_service import RaylibAudioService
 from game.services.keyboard_service import KeyboardService
 from game.casting.car import Car
 from game.casting.log import Log
 from game.casting.lives import Lives
 from game.casting.image import Image
-from game.casting.sound import Sound
 from game.scripting.control_chicken_action import ControlChickenAction
 from random import *
 
@@ -43,8 +40,6 @@ class HandleCollisionsAction(Action):
             cast (Cast): The cast of Actors in the game.
             script (Script): The script of Actions in the game.
         """
-        over_sound = Sound(OVER_SOUND)
-
         if not self._is_game_over:
 
             self._handle_collision(cast)
@@ -128,7 +123,6 @@ class HandleCollisionsAction(Action):
             if self._is_game_over:
                 animation = chicken.get_animation()
                 animation.set_boom(True)
-                self._audio_service.play_sound(over_sound)
                 
 
                 

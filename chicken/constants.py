@@ -51,23 +51,3 @@ CHICKEN_RATE = 1
 BOOM = "chicken/assets/images/boom.png"
 CHICKENS_LIVES = 10
 
-# SCENES
-NEW_GAME = 0
-TRY_AGAIN = 1
-NEXT_LEVEL = 2
-IN_PLAY = 3
-GAME_OVER = 4
-
-# PHASES
-INITIALIZE = 0
-LOAD = 1
-INPUT = 2
-UPDATE = 3
-OUTPUT = 4
-UNLOAD = 5
-RELEASE = 6
-
-# SOUND
-BOUNCE_SOUND = "chicken/assets/sounds/boing.wav"
-WELCOME_SOUND = "chicken/assets/sounds/start.wav"
-OVER_SOUND = "chicken/assets/sounds/over.wav"

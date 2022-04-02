@@ -9,7 +9,7 @@ from random import *
 
 class Menu(Actor):
     """
-    A DISPLAY  at the begining of the game that that handles game introduction and authors. Also does the job of gameover
+    A DISPLAY  at the beginig of the game that that handles game introduction and authors. Also does the job of gameover
     screen with an extra game over text added from  the add_game_over method
     
     Attributes:
