@@ -206,7 +206,7 @@ class HandleCollisionsAction(Action):
             animation.set_boom(False)
 
             level = cast.get_first_actor("level")
-            level.next_level()
+            level.reset()
             
             
             

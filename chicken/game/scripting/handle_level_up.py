@@ -79,13 +79,19 @@ class HandleLevelUp(Action):
         
     
         car_rows = cast.get_actors("car")
+        i = 1
         for rows in car_rows:
-            rows.start_cars(randint(last_level - randint(1, 3), next_level))
+            rows.start_cars(last_level + i)
+            i += 1
+            
 
         
         log_rows = cast.get_actors("log")
+        j = 1
         for rows in log_rows:
-            rows.start_logs(randint(last_level - randint(1, 3) ,next_level))
+            
+            rows.start_logs(last_level + j)
+            j += 1
         
         self._level_up = False
         
