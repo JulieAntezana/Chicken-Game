@@ -142,7 +142,7 @@ class HandleCollisionsAction(Action):
             if chicken.get_position().get_y() == y and chicken.get_position().get_x() in range(log.get_position().get_x()-10, log.get_position().get_x()+50):
                 chicken.set_position(Point(log.get_position().get_x() + 17, y))
                 self._is_game_over = False
-                if chicken.get_position().get_x() <= 0:
+                if chicken.get_position().get_x() <= 0 or chicken.get_position().get_x() >= MAX_X-17:
                     self._is_game_over = True
                     
                  

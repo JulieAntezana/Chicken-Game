@@ -47,17 +47,17 @@ class Menu(Actor):
         
         #Authors
         author = Actor()
-        author.set_text("Author:")
-        author.set_font_size(20)
+        author.set_text("Authors:")
+        author.set_font_size(25)
 
-        position = Point(250, 110)
+        position = Point(245, 110)
         author.set_position(position)
         
         self._texts.append(author)
         
         author1 = Actor()
         author1.set_text("Marcus Ojo-Osasere")
-        author1.set_font_size(15)
+        author1.set_font_size(20)
 
         position = Point(250, 140)
         author1.set_position(position)
@@ -66,7 +66,7 @@ class Menu(Actor):
         
         author2 = Actor()
         author2.set_text("Julie Antezana")
-        author2.set_font_size(15)
+        author2.set_font_size(20)
 
         position = Point(250, 180)
         author2.set_position(position)
@@ -75,7 +75,7 @@ class Menu(Actor):
         
         author3 = Actor()
         author3.set_text("Rune Larsen")
-        author3.set_font_size(15)
+        author3.set_font_size(20)
 
         position = Point(250, 220)
         author3.set_position(position)
