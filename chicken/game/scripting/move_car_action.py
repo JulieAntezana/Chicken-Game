@@ -26,7 +26,7 @@ class MoveCarAction(Action):
         Args:
             cast (Cast): The cast of Actors in the game.
         """
-        rate = randint(1,5)
+        rate = randint(1,24)
         cars = cast.get_actors("car")
         chicken = cast.get_first_actor("chicken")  
         menu = cast.get_first_actor("menu")
