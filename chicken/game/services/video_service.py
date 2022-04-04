@@ -134,7 +134,16 @@ class VideoService:
         for actor in actors:
             self.draw_actor(actor)
 
-        
+    def draw_help(self, actors):
+        """Draws the help menu.
+
+        Args:
+            actor (list):  List of texts to be displayed
+
+        """ 
+        pyray.draw_rectangle(0,0, MAX_X, MAX_Y, pyray.BLACK) 
+        for actor in actors:
+            self.draw_actor(actor)       
         
     
     def _get_x_offset(self, text, font_size):

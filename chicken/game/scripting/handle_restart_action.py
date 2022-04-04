@@ -38,12 +38,18 @@ class HandleRestartAction(Action):
         
         menu = cast.get_first_actor("menu")
 
+        help = cast.get_first_actor("help")
+
+        if self._keyboard_service.is_key_down('h'):
+            if menu.get_draw():
+                help.set_draw(True)
+
         if self._keyboard_service.is_key_down('space'):
             if not menu.get_game_state():
                 #start game
                 menu.set_draw(False)
                 self._audio_service.stop_sound(self._game_sound)            
-                self._game_sound.set_volume(0.5)
+                self._game_sound.set_volume(0.2)
                 self._audio_service.play_sound(self._game_sound)
                 menu.change_game_state(True)
             

@@ -39,11 +39,30 @@ class DrawActorsAction(Action):
         menu = cast.get_first_actor("menu")
         texts = menu.get_texts()
         
+        #help screen
+        help = cast.get_first_actor("help")
+        # texts = help.get_texts()
+        
         
         """checks if draw screen is on, which means its either the game is over or yet to start:
         if True: screen is drawn,
         else: Game is drawn
         """
+#This draws the help screen instead of menu
+        if menu.get_draw():
+            self._video_service.clear_buffer()
+
+            if help.get_draw():
+                texts = help.get_texts()
+        #     #     #time.sleep(3)
+
+                self._video_service.draw_help(texts)
+
+            else:
+                self._video_service.draw_menu(texts)
+
+                self._video_service.flush_buffer()
+  #Original working. this draws the menu screen, but not the help page          
         if menu.get_draw():
             
             #time.sleep(3)
@@ -56,7 +75,7 @@ class DrawActorsAction(Action):
                 
             self._video_service.flush_buffer()
             
-            
+                
         else:
             
             #banner

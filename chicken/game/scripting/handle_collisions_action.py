@@ -200,7 +200,7 @@ class HandleCollisionsAction(Action):
         #checks for input  
         if menu.restart_state():
             self._audio_service.stop_sound(self._game_play_sound)            
-            self._game_play_sound.set_volume(0.5)
+            self._game_play_sound.set_volume(0.2) # 0.5
             self._audio_service.play_sound(self._game_play_sound)                
             
             animation = chicken.get_animation()
@@ -309,7 +309,7 @@ class HandleCollisionsAction(Action):
         animation = chicken.get_animation()
         animation.set_boom(False)  
                
-        self._game_play_sound.set_volume(0.5)
+        self._game_play_sound.set_volume(0.2) #0.5
         self._audio_service.play_sound(self._game_play_sound)                
         
         chicken = cast.get_first_actor("chicken")

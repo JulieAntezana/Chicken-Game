@@ -7,6 +7,7 @@ from game.casting.level import Level
 from game.casting.chicken import Chicken
 from game.casting.animation import  Animation
 from game.casting.menu_screen import Menu
+from game.casting.help_page import Help
 from game.scripting.handle_restart_action import HandleRestartAction
 from game.scripting.play_sound_action import PlaySoundAction
 from game.casting.car import Car
@@ -80,6 +81,9 @@ def main():
 
     #Menu
     cast.add_actor("menu", Menu())
+
+    #Menu
+    cast.add_actor("help", Help())
     
    
     # start the game

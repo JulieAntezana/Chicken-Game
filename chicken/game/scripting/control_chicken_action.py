@@ -70,6 +70,16 @@ class ControlChickenAction(Action):
                 else:
                     self._direction = Point(0, +CELL_SIZE)
             
+            # help
+            if self._keyboard_service.is_key_down('h'):
+                # pass
+                menu = cast.get_first_actor("help")
+                menu.get_draw()
+                # if chicken.get_position().get_y() >= MAX_Y - 30:
+                #     self._direction = Point(0, 0)               
+                # else:
+                #     self._direction = Point(0, +CELL_SIZE)
+            
 
             chicken = cast.get_first_actor("chicken")
             chicken.set_velocity(self._direction)

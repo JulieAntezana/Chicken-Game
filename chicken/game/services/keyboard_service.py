@@ -21,7 +21,7 @@ class KeyboardService:
         self._keys['right'] = pyray.KEY_RIGHT
         self._keys['enter'] = pyray.KEY_ENTER
         
-
+        self._keys['h'] = pyray.KEY_H
         self._keys['space'] = pyray.KEY_SPACE
 
     def is_key_down(self, key):
