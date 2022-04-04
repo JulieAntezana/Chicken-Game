@@ -99,7 +99,7 @@ class Help(Actor):
 
         #Prompt
         prompt = Actor()
-        prompt.set_text("Press H for Help")
+        prompt.set_text("Authors: Marcus Ojo-Osasere, Julie Antezana & Rune Larsen")
         prompt.set_font_size(20)
         prompt.set_color(YELLOW)
         position = Point(200, 360)
